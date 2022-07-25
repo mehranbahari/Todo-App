@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  width: 100%;
+  height: 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 50px auto;
 }
-
-.App-link {
-  color: #61dafb;
+form input {
+  width: 360px;
+  height: 40px;
+  outline: none;
+  caret-color: red;
 }
-
-@keyframes App-logo-spin {
+ul,
+li {
+  list-style: none;
+}
+ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+li {
+  width: 360px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #eee;
+  margin: 5px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-family: sans-serif;
+}
+button {
+  cursor: pointer;
+}
+button:nth-child(1) {
+  margin-left: auto;
+  margin-right: 10px;
+}
+.clearAll {
+  width: 360px;
+  height: 40px;
+  background-color: #eee;
+  border: none;
+}
+.clearAll:hover {
+  animation: anim 1s alternate ease-in;
+  transition: 1.5s;
+}
+@keyframes anim {
   from {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
   to {
-    transform: rotate(360deg);
+    transform: scale(0.5);
   }
 }
